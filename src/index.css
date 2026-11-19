@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pricedown";
+  src: url("/pricedown.otf") format("opentype");
+  font-display: swap;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #000;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing img,
+.story-section img,
+.svg image {
+  will-change: transform, opacity, filter;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btmbar {
+  border: 0;
+  cursor: pointer;
+}
+
+.music-control {
+  font-size: 1.35rem;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.music-control:hover {
+  background: rgb(250 204 21 / 95%);
+  color: #000;
+  transform: scale(1.08);
+}
+
+.text h1 {
+  margin: 0;
+  font-family: "Pricedown", Impact, sans-serif;
+  line-height: 0.78;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+  text-shadow: 0 8px 30px rgb(0 0 0 / 42%);
+}
+
+.hero-word {
+  font-size: clamp(5rem, 10.5vw, 11rem);
+  text-align: center;
+}
+
+.hero-word-one {
+  transform: translateX(-7%);
+}
+
+.hero-word-two {
+  transform: translateX(10%);
+}
+
+.hero-word-three {
+  transform: translateX(-8%);
+}
+
+.story-title {
+  margin: 0;
+  font-family: "Pricedown", Impact, sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.rg button {
+  border: 0;
+  font-family: "Pricedown", Impact, sans-serif;
+  cursor: pointer;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.rg button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-4px);
+}
+
+.limg-main {
+  z-index: 1;
+  filter: drop-shadow(0 24px 50px rgb(0 0 0 / 55%));
+}
+
+.character {
+  transform-origin: 50% 100%;
+  translate: -50% 0;
+}
+
+
+@media (max-width: 900px) {
+  .landing {
+    min-height: 600px;
+  }
+
+  .btmbar {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .btmbar img {
+    height: 42px;
+  }
+
+  .navbar {
+    padding: 1.5rem;
+  }
+
+  .hero-word {
+    font-size: clamp(4rem, 16vw, 7.5rem);
+  }
+
+  .character {
+    height: 68%;
+    max-width: 94%;
+  }
+
+  .story-section {
+    align-items: flex-start;
+  }
+
+  .story-section .cntnr {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .story-section .limg {
+    width: 100%;
+    height: min(52vh, 480px);
+    min-height: 340px;
+  }
+
+  .story-section .rg {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .story-title {
+    font-size: clamp(3.25rem, 13vw, 5.5rem);
+  }
+}
